@@ -9,10 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
         let score = 0;
         const totalQuestions = 10;
 
+        // Loop through each question and add the value to the score
         for (let i = 1; i <= totalQuestions; i++) {
             const answer = document.getElementById('q' + i).value;
             if (answer) {
                 score += parseInt(answer);
+            } else {
+                // If any question is not answered, alert the user and return
+                alert("Please answer all questions before submitting.");
+                return;
             }
         }
 
