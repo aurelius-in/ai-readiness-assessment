@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    width: 100%;
 }
 
 #banner {
@@ -22,6 +23,12 @@ body {
 #banner-img {
     width: 100%;
     height: auto;
+}
+
+#app-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
