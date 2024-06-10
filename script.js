@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const splashScreen = document.getElementById('splash-screen');
     const appContent = document.getElementById('app-content');
 
-    splashScreen.addEventListener('click', () => {
-        splashScreen.classList.add('hidden');
+    splashScreen.addEventListener('click', function() {
+        splashScreen.style.display = 'none';
         appContent.classList.remove('hidden');
     });
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const result = document.getElementById('result');
     const resultText = document.getElementById('result-text');
 
-    assessmentForm.addEventListener('submit', (e) => {
+    assessmentForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
         let score = 0;
