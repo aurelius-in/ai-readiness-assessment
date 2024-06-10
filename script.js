@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Loop through each question and add the value to the score
         for (let i = 1; i <= totalQuestions; i++) {
             const answer = document.getElementById('q' + i).value;
+            console.log(`Question ${i} answer: ${answer}`); // Debugging line
             if (answer) {
                 score += parseInt(answer);
             } else {
@@ -26,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        console.log(`Total score: ${score}`); // Debugging line
+
         let resultMessage = '';
         if (score >= totalQuestions * 4) {
             resultMessage = 'Your company is fully ready to implement AI. You have all the necessary components in place!';
@@ -34,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             resultMessage = 'Your company has some work to do before it is ready for AI. Focus on building a clear strategy and supporting infrastructure.';
         }
+
+        console.log(`Result message: ${resultMessage}`); // Debugging line
 
         resultText.textContent = resultMessage;
         result.classList.remove('hidden');
