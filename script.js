@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let score = 0;
         const totalQuestions = 10;
+        let allAnswered = true;
 
         // Loop through each question and add the value to the score
         for (let i = 1; i <= totalQuestions; i++) {
@@ -15,10 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (answer) {
                 score += parseInt(answer);
             } else {
-                // If any question is not answered, alert the user and return
-                alert("Please answer all questions before submitting.");
-                return;
+                allAnswered = false;
+                break;
             }
+        }
+
+        if (!allAnswered) {
+            alert("Please answer all questions before submitting.");
+            return;
         }
 
         let resultMessage = '';
