@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const assessmentForm = document.getElementById('assessment-form');
+    const submitButton = document.getElementById('submit-button');
     const result = document.getElementById('result');
     const resultText = document.getElementById('result-text');
 
-    assessmentForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent the default form submission behavior
-
+    submitButton.addEventListener('click', function() {
         let score = 0;
         const totalQuestions = 10;
         let allAnswered = true;
