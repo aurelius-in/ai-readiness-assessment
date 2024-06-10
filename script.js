@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(`Result message: ${resultMessage}`); // Debugging line
 
         resultText.textContent = resultMessage;
+        console.log(`Result text content: ${resultText.textContent}`); // Debugging line
         result.classList.remove('hidden');
+        console.log(`Result class list: ${result.classList}`); // Debugging line
     });
 });
