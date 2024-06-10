@@ -2,7 +2,7 @@ document.getElementById('assessment-form').addEventListener('submit', function(e
     e.preventDefault();
     
     let score = 0;
-    const totalQuestions = 5;
+    const totalQuestions = 10;
 
     // Calculate the score based on user inputs
     for (let i = 1; i <= totalQuestions; i++) {
@@ -11,9 +11,9 @@ document.getElementById('assessment-form').addEventListener('submit', function(e
 
     // Generate the result text based on the score
     let resultText = '';
-    if (score === totalQuestions) {
+    if (score >= totalQuestions * 4) {
         resultText = 'Your company is fully ready to implement AI. You have all the necessary components in place!';
-    } else if (score >= totalQuestions * 0.6) {
+    } else if (score >= totalQuestions * 3) {
         resultText = 'Your company is moderately ready for AI implementation. Consider strengthening your AI strategy and team.';
     } else {
         resultText = 'Your company has some work to do before it is ready for AI. Focus on building a clear strategy and supporting infrastructure.';
