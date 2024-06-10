@@ -1,12 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const splashScreen = document.getElementById('splash-screen');
-    const appContent = document.getElementById('app-content');
-
-    splashScreen.addEventListener('click', function() {
-        splashScreen.style.display = 'none';
-        appContent.classList.remove('hidden');
-    });
-
     const assessmentForm = document.getElementById('assessment-form');
     const result = document.getElementById('result');
     const resultText = document.getElementById('result-text');
