@@ -4,13 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultText = document.getElementById('result-text');
 
     assessmentForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevent the default form submission behavior
 
         let score = 0;
         const totalQuestions = 10;
 
         for (let i = 1; i <= totalQuestions; i++) {
-            score += parseInt(document.getElementById('q' + i).value);
+            const answer = document.getElementById('q' + i).value;
+            if (answer) {
+                score += parseInt(answer);
+            }
         }
 
         let resultMessage = '';
