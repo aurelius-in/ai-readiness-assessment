@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Readiness Assessment Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Readiness Assessment Tool</h1>
+        <form id="assessment-form">
+            <div class="question">
+                <label for="q1">Does your company have a clear AI strategy?</label>
+                <select id="q1" required>
+                    <option value="">Select an option</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q2">Do you have dedicated AI personnel or teams?</label>
+                <select id="q2" required>
+                    <option value="">Select an option</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q3">Is your data infrastructure prepared for AI implementation?</label>
+                <select id="q3" required>
+                    <option value="">Select an option</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q4">Do you have a budget allocated for AI projects?</label>
+                <select id="q4" required>
+                    <option value="">Select an option</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q5">Is there executive support for AI initiatives?</label>
+                <select id="q5" required>
+                    <option value="">Select an option</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Assessment Result</h2>
+            <p id="result-text"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
