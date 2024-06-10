@@ -34,4 +34,3 @@ document.addEventListener('DOMContentLoaded', () => {
         result.classList.remove('hidden');
     });
 });
- 
